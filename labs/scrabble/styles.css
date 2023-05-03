@@ -75,4 +75,9 @@ div span {
     gap: 6.25em;
 }
 
+.line {
+    border-bottom: 1px solid #F1F1F1;
+    margin: 40px 90px;
+}
+
 /* Word Input */
