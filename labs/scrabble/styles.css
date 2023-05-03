@@ -77,7 +77,39 @@ div span {
 
 .line {
     border-bottom: 1px solid #F1F1F1;
-    margin: 40px 90px;
+    margin: 2.5em 5.62em;
 }
 
 /* Word Input */
+
+.wordOne,
+.wordTwo {
+    color: #F1F1F1;
+    font-size: 1.87em;
+    margin-top: 3.12em;
+}
+
+.wordOne {
+    display: flex;
+    gap: 3.75em;
+    margin-left: 8.5em;
+}
+
+.wordTwo {
+    display: flex;
+    gap: 3.75em;
+    margin-left: 8.5em;
+}
+
+input {
+    width: 39.4em;
+    border: none;
+    padding: 1.25em;
+}
+
+input::placeholder {
+    font-size: 1.5em;
+    opacity: 0.5;
+}
+
+/* Button */
