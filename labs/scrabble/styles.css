@@ -10,7 +10,6 @@
 
 body {
     font-family: 'Varela Round', sans-serif;
-    font-size: 100%;
     background-color: #F3C5C5;
 }
 
@@ -26,3 +25,30 @@ body {
     height:auto;
     width: auto;
 }
+
+/* Title Tiles */
+
+.tile {
+    color: #F1F1F1;
+    width: 6.25em;
+    height: 6.25em;
+    margin: 0;
+    background-image: linear-gradient(#A9B9D9, #F29374);
+    display: grid;
+    place-items: center;
+    margin-top: 45px;
+    margin-bottom: 25px;
+}
+
+div span {
+    font-size: 3em;
+}
+
+.title {
+    display: flex;
+    gap: 25px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Instructions, Rounds, and Points */
