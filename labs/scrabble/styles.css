@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+/* Background, Borders, and Base css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Varela Round', sans-serif;
+    font-size: 100%;
+    background-color: #F3C5C5;
+}
+
+.white-border {
+    height: auto;
+    width: auto;
+    border: 0.937em solid #F1F1F1;
+    margin: 1.25em;
+}
+
+.orange-box {
+    background-color: #F29374;
+    height:auto;
+    width: auto;
+}
