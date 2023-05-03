@@ -2,10 +2,39 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="styles.css">
         <title>Scrabble</title>
     </head>
     <body>
-        <h1>Scrabble</h1>
+        <div class="white-border">
+            <div class="orange-box">
+              <main>
+                <div class="title">
+                  <div class="tile">S</div>
+                  <div class="tile">C</div>
+                  <div class="tile">R</div>
+                  <div class="tile">A</div>
+                  <div class="tile">B</div>
+                  <div class="tile">B</div>
+                  <div class="tile">L</div>
+                  <div class="tile">E</div>
+                </div>
+                <p>The first player to reach 350 points wins.</p>
+                <h1 class="round">Round 1</h1>
+                <h2 class="playerOne_Points">Player One: 0</h2>
+                <h2 class="playerTwo_Points">Player Two: 0</h2>
+                <span class="line"></span>
+
+                <h3>Player One</h3>
+                <input class="playerOne_text" type="text" placeholder="Player One's word">
+                <h3>Player Two</h3>
+                 <input class="playerTwo_text" type="text" placeholder="Player Two's word">
+
+                <button>Calculate Points</button>
+              </main>
+            </div>
+        </div>
         <script src="script.js"></script>
     </body>
 </html>
