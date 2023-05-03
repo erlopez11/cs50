@@ -113,3 +113,22 @@ input::placeholder {
 }
 
 /* Button */
+
+.button_container {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: none;
+    width: 12em;
+    height: 2.5em;
+    border-radius: 0.37em;
+    background-color: #A9B9D9;
+    color:#F1F1F1;
+    padding: 0.125em;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 1.56em;
+    margin-top: 3.12em;
+    margin-bottom: 3.12em;
+}
