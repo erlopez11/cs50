@@ -2,7 +2,7 @@
 
 const calculateBtn = document.querySelector(".calculate-points"),
 inputFieldOne = document.querySelector(".playerOne_text"),
-inputFieldTwo = document.querySelector(".playerTwo-text");
+inputFieldTwo = document.querySelector(".playerTwo_text");
 
 
 
@@ -115,8 +115,8 @@ function computeScore(word) {
 /* A Round of Scrabble */
 
 function playScrabble() {
-    let wordOne = inputFieldOne;
-    let wordTwo = inputFieldTwo;
+    let wordOne = inputFieldOne.value;
+    let wordTwo = inputFieldTwo.value;
 
     let scoreOne = computeScore(wordOne);
     let scoreTwo = computeScore(wordTwo);
@@ -130,7 +130,7 @@ function playScrabble() {
         console.log('Player Two is the winner!');
     } else {
         console.log('It\'s a tie!');
-    }
+    } 
 }
 
 calculateBtn.addEventListener('click', playScrabble);
