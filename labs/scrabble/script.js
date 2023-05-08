@@ -1,4 +1,12 @@
-/* Get the two words for game */
+/* Document Elements */
+
+const calculateBtn = document.querySelector(".calculate-points"),
+inputFieldOne = document.querySelector(".playerOne_text"),
+inputFieldTwo = document.querySelector(".playerTwo-text");
+
+
+
+/* Get the two words for game 
 
 function getWordOne(wordOne) {
     wordOne = prompt('Player One, enter your word.');
@@ -8,7 +16,7 @@ function getWordOne(wordOne) {
 function getWordTwo(wordTwo) {
     wordTwo = prompt('Player Two, enter your word.');
     return wordTwo.toLowerCase();
-}
+} */
 
 /* Calculating the points for the word */
 
@@ -107,8 +115,8 @@ function computeScore(word) {
 /* A Round of Scrabble */
 
 function playScrabble() {
-    let wordOne = getWordOne();
-    let wordTwo = getWordTwo();
+    let wordOne = inputFieldOne;
+    let wordTwo = inputFieldTwo;
 
     let scoreOne = computeScore(wordOne);
     let scoreTwo = computeScore(wordTwo);
@@ -125,5 +133,4 @@ function playScrabble() {
     }
 }
 
-playScrabble();
-
+calculateBtn.addEventListener('click', playScrabble);
