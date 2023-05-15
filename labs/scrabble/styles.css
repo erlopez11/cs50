@@ -182,8 +182,8 @@ button {
 }
 
 .restart {
-    width: 200px;
-    height: 50px;
+    width: 12.5em;
+    height: 3.12em;
     font-size: 1.25em;
     margin-top: 1.5em;
     margin-bottom: 2.5em;
@@ -260,6 +260,17 @@ button {
         height: 2.5em;
         font-size: 1em;
     }
+
+    .items {
+        width: 15.62em;
+        height: 7.5em;
+    }
+
+    .restart {
+        width: 9.37em;
+        height: 2.81em;
+        font-size: 1em;
+    }
 }
 
 /* Smaller Tablet */
@@ -332,6 +343,17 @@ button {
         font-size: 1em;
         margin-top: 6em;
     }
+
+    .items {
+        width: 18.75em;
+        height: 7.5em;
+    }
+
+    .restart {
+        width: 9.37em;
+        height: 3em;
+        font-size: 1.17em;
+    }
 }
 
 /* Tablet */
@@ -386,5 +408,9 @@ button {
 
     button {
         margin-top: 3em;
+    }
+
+    .restart {
+        width: 11.87em;
     }
 }
