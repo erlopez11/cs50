@@ -67,6 +67,10 @@ div span {
     margin-top: 0.625;
 }
 
+.round {
+    margin: 1em;
+}
+
 .info {
     display: flex;
     flex-direction: column;
@@ -95,18 +99,22 @@ div span {
 
 .wordOne {
     display: flex;
-    gap: 3.75em;
-    margin-left: 8.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.12em;
 }
 
 .wordTwo {
     display: flex;
-    gap: 3.75em;
-    margin-left: 8.5em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3.12em;
 }
 
 input {
-    width: 39.4em;
+    width: 40%;
     height: 2.5em;
     border: none;
     padding: 1.25em;
@@ -134,7 +142,7 @@ button {
     padding: 0.125em;
     font-family: 'Varela Round', sans-serif;
     font-size: 1.56em;
-    margin-top: 2.5em;
+    margin-top: 4em;
     margin-bottom: 2.5em;
 }
 
@@ -189,6 +197,7 @@ button {
         width: 1.56em;
         height: 1.56em;
         margin-bottom: 1em;
+       /* margin-top: 2em;*/
     }
 
     div span {
@@ -210,8 +219,12 @@ button {
         font-size: 1.03em;
     }
 
+    .round {
+        margin-bottom: 0.75em;
+    }
+
     .line {
-        margin: 2.5em 2em;
+        margin: 2.5em 2em 0 2em;
     }
 
     .points {
@@ -221,10 +234,11 @@ button {
     .wordOne,
     .wordTwo {
         font-size: 0.87em;
+        margin-top: 2em;
     }
 
     input {
-        width: 18.75em;
+        width: 60%;
     }
 
     input::placeholder {
@@ -232,17 +246,11 @@ button {
     }
 
     .wordOne {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 2em;
         margin-left: 0;
     }
 
     .wordTwo {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         gap: 2em;
         margin-left: 0;
     }
@@ -251,5 +259,132 @@ button {
         width: 9.37em;
         height: 2.5em;
         font-size: 1em;
+    }
+}
+
+/* Smaller Tablet */
+@media only screen and (min-width: 401px) and (max-width: 689px) {
+    .tile {
+        width: 1.75em;
+        height: 1.75em;
+        margin-bottom: 1em;
+        margin-top: 2em;
+    }
+
+    div span {
+        font-size: 1.25em;
+    }
+
+    .title {
+        gap: .67em;
+    }
+
+    .instruction {
+        font-size: 0.87em;
+        margin-bottom: 2em;
+    }
+
+    .round,
+    .playerOne_Points,
+    .playerTwo_Points {
+        font-size: 1.12em;
+    }
+
+    .round {
+        margin-bottom: 0.75em;
+    }
+
+    .line {
+        margin: 2.5em 2em 0 2em;
+    }
+
+    .points {
+        gap: 3.12em;
+    }
+
+    input {
+        width: 60%;
+    }
+
+    input::placeholder {
+        font-size: 0.87em;
+    }
+
+    .wordOne,
+    .wordTwo {
+        font-size: 1em;
+        margin-top: 4em;
+    }
+
+    .wordOne {
+        gap: 2em;
+        margin-left: 0;
+    }
+
+    .wordTwo {
+        gap: 2em;
+        margin-left: 0;
+    }
+
+    button {
+        width: 10em;
+        height: 2.5em;
+        font-size: 1em;
+        margin-top: 6em;
+    }
+}
+
+/* Tablet */
+@media only screen and (min-width: 690px) and (max-width: 960px) {
+    .tile {
+        width: 3.75em;
+        height: 3.75em;
+        margin-bottom: 1em;
+        margin-top: 3.5em;
+    }
+
+    div span {
+        font-size: 2.25em;
+    }
+
+    .title {
+        gap: 1em;
+    }
+
+    .instruction {
+        font-size: 1.37em;
+        margin-bottom: 2em;
+    }
+
+    input {
+        width: 50%;
+    }
+
+    .round,
+    .playerOne_Points,
+    .playerTwo_Points {
+        font-size: 1.87em;
+    }
+
+    .round {
+        margin-bottom: 1em;
+    }
+    .wordOne,
+    .wordTwo {
+        margin-top: 2em;
+    }
+
+    .wordOne {
+        gap: 2em;
+        margin-left: 0;
+    }
+
+    .wordTwo {
+        gap: 2em;
+        margin-left: 0;
+    }
+
+    button {
+        margin-top: 3em;
     }
 }
