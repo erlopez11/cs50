@@ -14,7 +14,7 @@ body {
 }
 
 .white-border {
-    height: 95vh;
+    height: auto;
     width: auto;
     border: 0.937em solid #F1F1F1;
     margin: 1.25em;
@@ -94,7 +94,7 @@ div span {
 .wordTwo {
     color: #F1F1F1;
     font-size: 1.56em;
-    margin-top: 3.12em;
+    margin-top: 2.5em;
 }
 
 .wordOne {
@@ -102,7 +102,7 @@ div span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3.12em;
+    gap: 1.87em;
 }
 
 .wordTwo {
@@ -110,7 +110,7 @@ div span {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3.12em;
+    gap: 1.87em;
 }
 
 input {
