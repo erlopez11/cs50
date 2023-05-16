@@ -1,8 +1,18 @@
 /* Document Elements */
 
-const calculateBtn = document.querySelector(".calculate-points"),
-inputFieldOne = document.querySelector(".playerOne_text"),
-inputFieldTwo = document.querySelector(".playerTwo_text");
+let currentScoreOne = 0;
+let currentScoreTwo = 0;
+let rounds = 0;
+
+const calculateBtn = document.querySelector(".calculate-points");
+const restartBtn = document.querySelector(".restart");
+const inputFieldOne = document.querySelector(".playerOne_text");
+const inputFieldTwo = document.querySelector(".playerTwo_text");
+const onePoints = document.querySelector(".playerOne_Points");
+const twoPoints = document.querySelector(".playerTwo_Points");
+const roundNumber = document.querySelector(".round");
+const winner = document.querySelector(".winner");
+const overlay = document.querySelector(".overlay");
 
 
 
@@ -114,23 +124,59 @@ function computeScore(word) {
 
 /* A Round of Scrabble */
 
-function playScrabble() {
+function playRounds() {
     let wordOne = inputFieldOne.value;
     let wordTwo = inputFieldTwo.value;
-
     let scoreOne = computeScore(wordOne);
     let scoreTwo = computeScore(wordTwo);
 
-    console.log(`Player One: ${wordOne}`);
-    console.log(`Player Two: ${wordTwo}`);
-
-    if (scoreOne > scoreTwo) {
-        console.log('Player One is the winner!');
-    } else if (scoreTwo > scoreOne) {
-        console.log('Player Two is the winner!');
-    } else {
-        console.log('It\'s a tie!');
-    } 
+    currentScoreOne += scoreOne;
+    currentScoreTwo += scoreTwo;
+    rounds++;
 }
 
+function updateGame() {
+    onePoints.textContent = `Player One: ${currentScoreOne}`;
+    twoPoints.textContent = `Player Two: ${currentScoreTwo}`;
+    roundNumber.textContent = `Round ${rounds}`;
+}
+
+function endGame() {
+    if (currentScoreOne >= 100 || currentScoreTwo >= 100) {
+        overlay.style.display = "flex";
+        if (currentScoreOne === currentScoreTwo) {
+            winner.textContent = 'It\'s a tie!';
+        } else if (currentScoreOne > currentScoreTwo) {
+            winner.textContent = 'Player One wins!';
+        } else if (currentScoreTwo > currentScoreOne) {
+            winner.textContent = 'Player Two wins!';
+        }
+    }
+}
+
+function playScrabble() {
+    playRounds()
+    inputFieldOne.value = '';
+    inputFieldTwo.value = '';
+    updateGame()
+    endGame()
+}
+
+/* Restart Game */
+
+function restartGame() {
+    overlay.style.display = "none";
+    currentScoreOne = 0;
+    currentScoreTwo = 0;
+    rounds = 0;
+    onePoints.textContent = `Player One: ${currentScoreOne}`;
+    twoPoints.textContent = `Player Two: ${currentScoreTwo}`;
+    roundNumber.textContent = `Round ${rounds}`;
+    inputFieldOne.value = '';
+    inputFieldTwo.value = '';
+}
+
+
 calculateBtn.addEventListener('click', playScrabble);
+restartBtn.addEventListener('click', restartGame);
+
